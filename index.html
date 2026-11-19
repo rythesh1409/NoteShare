@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NoteShare - Digital Notes Sharing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 NoteShare</h1>
+        <p>Share Knowledge, Help Students</p>
+        <hr>
+    </header>
+
+    <nav>
+        <a href="#">Home</a> |
+        <a href="#">Upload Notes</a> |
+        <a href="#">View Notes</a> |
+        <a href="#">About Us</a>
+    </nav>
+
+    <hr>
+
+    <section>
+        <h2>Welcome to NoteShare!</h2>
+
+        <p>
+            NoteShare is a digital platform that allows students
+            to upload, share and access academic notes easily.
+        </p>
+
+        <p>
+            Our aim is to make educational resources accessible
+            to every student.
+        </p>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Upload Your Notes</h2>
+
+        <form>
+
+            <label>Note Title:</label><br>
+            <input type="text" id="title" placeholder="Enter note title"><br><br>
+
+            <label>Subject:</label><br>
+            <input type="text" id="subject" placeholder="Enter subject"><br><br>
+
+            <label>Semester:</label><br>
+
+            <select id="semester">
+                <option value="">Select Semester</option>
+                <option>Semester 1</option>
+                <option>Semester 2</option>
+                <option>Semester 3</option>
+                <option>Semester 4</option>
+                <option>Semester 5</option>
+                <option>Semester 6</option>
+            </select><br><br>
+
+            <label>Upload PDF:</label><br>
+            <input type="file" id="file" accept=".pdf"><br><br>
+
+            <button type="button" onclick="addNote()">Upload</button>
+
+        </form>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Available Notes</h2>
+
+        <div id="notesList">
+            <p>Notes will be displayed here.</p>
+        </div>
+
+    </section>
+
+    <hr>
+
+    <footer>
+        <p>© 2026 NoteShare | Share Knowledge, Help Students</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
