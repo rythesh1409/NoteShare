@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NoteShare - Digital Notes Sharing</title>
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="/style.css?v=2">
 </head>
 
 <body>
 
+    <!-- HEADER -->
     <header>
         <h1>📚 NoteShare</h1>
         <p>Share Knowledge, Help Students</p>
-        <hr>
     </header>
 
+    <!-- NAVIGATION -->
     <nav>
-        <a href="#">Home</a> |
-        <a href="#">Upload Notes</a> |
-        <a href="#">View Notes</a> |
-        <a href="#">About Us</a>
+        <a href="#home">Home</a>
+        <a href="#upload">Upload Notes</a>
+        <a href="#notes">View Notes</a>
+        <a href="#ai">AI Summarizer</a>
     </nav>
 
-    <hr>
+    <!-- HOME -->
+    <section id="home" class="hero">
 
-    <section>
         <h2>Welcome to NoteShare!</h2>
 
         <p>
@@ -34,24 +40,27 @@
             Our aim is to make educational resources accessible
             to every student.
         </p>
+
     </section>
 
-    <hr>
+    <!-- UPLOAD NOTES -->
+    <section id="upload">
 
-    <section>
         <h2>Upload Your Notes</h2>
 
-        <form>
+        <form id="uploadForm">
 
-            <label>Note Title:</label><br>
-            <input type="text" id="title" placeholder="Enter note title"><br><br>
+            <label>Note Title:</label>
+            <input type="text" id="title"
+                placeholder="Enter note title" required>
 
-            <label>Subject:</label><br>
-            <input type="text" id="subject" placeholder="Enter subject"><br><br>
+            <label>Subject:</label>
+            <input type="text" id="subject"
+                placeholder="Enter subject" required>
 
-            <label>Semester:</label><br>
+            <label>Semester:</label>
 
-            <select id="semester">
+            <select id="semester" required>
                 <option value="">Select Semester</option>
                 <option>Semester 1</option>
                 <option>Semester 2</option>
@@ -59,34 +68,64 @@
                 <option>Semester 4</option>
                 <option>Semester 5</option>
                 <option>Semester 6</option>
-            </select><br><br>
+            </select>
 
-            <label>Upload PDF:</label><br>
-            <input type="file" id="file" accept=".pdf"><br><br>
+            <label>Upload PDF:</label>
+            <input type="file" id="file" accept=".pdf,application/pdf" required>
 
-            <button type="button" onclick="addNote()">Upload</button>
+            <button type="submit">Upload Notes</button>
 
         </form>
+
     </section>
 
-    <hr>
+    <!-- AVAILABLE NOTES -->
+    <section id="notes">
 
-    <section>
         <h2>Available Notes</h2>
 
         <div id="notesList">
-            <p>Notes will be displayed here.</p>
+            <p id="emptyMessage">No notes uploaded yet.</p>
         </div>
 
     </section>
 
-    <hr>
+    <!-- AI SUMMARIZER -->
+    <section id="ai">
 
+        <h2>🤖 AI PDF Summarizer</h2>
+
+        <p>
+            Upload your academic PDF and let AI convert
+            lengthy notes into simple and understandable summaries.
+        </p>
+
+        <label>Select Your PDF:</label>
+
+        <input type="file" id="summaryPdf" accept=".pdf,application/pdf">
+
+        <button type="button" id="summarizeBtn">
+            Summarize PDF
+        </button>
+
+        <div id="summaryResult">
+            <h3>AI Generated Summary</h3>
+            <p>Your summary will appear here.</p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 NoteShare | Share Knowledge, Help Students</p>
+
+        <p>
+            © 2026 NoteShare | Share Knowledge, Help Students
+        </p>
+
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js?v=2"></script>
 
 </body>
+
 </html>

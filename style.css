@@ -1,61 +1,124 @@
+/* GENERAL */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7fc;
+    background-color: #f3f6fc;
     margin: 0;
-    padding: 0;
+    color: #333;
 }
 
-/* Header */
+
+/* HEADER */
+
 header {
-    background-color: #4a6cf7;
+    background: linear-gradient(135deg, #4a6cf7, #304fc7);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
 }
 
-/* Navigation */
+header h1 {
+    font-size: 38px;
+    margin: 0;
+}
+
+header p {
+    font-size: 17px;
+}
+
+
+/* NAVIGATION */
+
 nav {
-    text-align: center;
-    padding: 15px;
     background-color: white;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
     text-decoration: none;
-    color: #333;
-    margin: 15px;
+    color: #304fc7;
+    font-weight: bold;
+    margin: 0 18px;
 }
 
-/* Sections */
+nav a:hover {
+    color: #ff7b00;
+}
+
+
+/* SECTIONS */
+
 section {
     background-color: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 80%;
-    border-radius: 8px;
+    width: 85%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
 }
 
-/* Headings */
 h2 {
-    color: #4a6cf7;
+    color: #304fc7;
+    margin-top: 0;
 }
 
-/* Input fields */
+
+/* HERO */
+
+.hero {
+    text-align: center;
+    padding: 45px 30px;
+    line-height: 1.7;
+}
+
+
+/* FORM */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
 input, select {
-    padding: 10px;
-    width: 90%;
+    width: 100%;
+    padding: 12px;
     margin-top: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 15px;
 }
 
-/* Button */
+
+/* BUTTONS */
+
 button {
     background-color: #4a6cf7;
     color: white;
-    padding: 10px 20px;
+    padding: 13px 22px;
+    margin-top: 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
 }
 
@@ -63,9 +126,81 @@ button:hover {
     background-color: #304fc7;
 }
 
-/* Footer */
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
+
+
+/* AVAILABLE NOTES */
+
+.note-card {
+    background-color: #f4f7ff;
+    padding: 18px;
+    margin-top: 15px;
+    border-left: 5px solid #4a6cf7;
+    border-radius: 6px;
+}
+
+.note-card h3 {
+    color: #304fc7;
+}
+
+.note-card a {
+    color: #304fc7;
+    font-weight: bold;
+}
+
+
+/* AI SUMMARIZER */
+
+#ai {
+    border-top: 5px solid #4a6cf7;
+}
+
+#summaryResult {
+    background-color: #f4f7ff;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 8px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    min-height: 100px;
+}
+
+#summaryResult h3 {
+    color: #304fc7;
+}
+
+
+/* FOOTER */
+
 footer {
-    background-color: #e6eaf5;
+    background-color: #25345c;
+    color: white;
     text-align: center;
-    padding: 15px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    section {
+        width: 92%;
+        padding: 20px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
 }
